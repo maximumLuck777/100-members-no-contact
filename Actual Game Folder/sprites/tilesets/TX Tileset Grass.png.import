@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hs2box2ysjnk"
-path="res://.godot/imported/Blade1.png-ae587f243356a4ff648880ed50b436ff.ctex"
+uid="uid://c42vj6tndoutg"
+path="res://.godot/imported/TX Tileset Grass.png-4756a130d2188eca82af086daebd3f57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Miscellanious Assets Dump/Image/Blade1.png"
-dest_files=["res://.godot/imported/Blade1.png-ae587f243356a4ff648880ed50b436ff.ctex"]
+source_file="res://Actual Game Folder/sprites/tilesets/TX Tileset Grass.png"
+dest_files=["res://.godot/imported/TX Tileset Grass.png-4756a130d2188eca82af086daebd3f57.ctex"]
 
 [params]
 
