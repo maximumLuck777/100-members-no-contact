@@ -1,14 +1,20 @@
 [gd_scene format=3 uid="uid://e1d03bbv2uh"]
 
 [ext_resource type="Script" uid="uid://bn5pltvin1n7e" path="res://Actual Game Folder/scripts/player.gd" id="1_7buym"]
-[ext_resource type="Texture2D" uid="uid://cme662o0ufeay" path="res://icon.svg" id="1_rbky7"]
+[ext_resource type="Texture2D" uid="uid://dwmuxqubqjmje" path="res://Miscellanious Assets Dump/Image/sample_beyblade.png" id="2_7buym"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kmxop"]
+radius = 253.04396
 
 [node name="Player" type="CharacterBody2D" unique_id=1516017166]
 script = ExtResource("1_7buym")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=661915652]
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
-texture = ExtResource("1_rbky7")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2048784928]
+position = Vector2(-3.8146973e-06, -3.8146973e-06)
+scale = Vector2(0.24899998, 0.24899998)
+texture = ExtResource("2_7buym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1556826632]
+position = Vector2(-3.8146973e-06, -3.8146973e-06)
+scale = Vector2(0.24899998, 0.24899998)
+shape = SubResource("CircleShape2D_kmxop")
