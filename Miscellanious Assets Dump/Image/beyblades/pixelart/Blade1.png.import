@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hs2box2ysjnk"
-path="res://.godot/imported/Blade1.png-ae587f243356a4ff648880ed50b436ff.ctex"
+path="res://.godot/imported/Blade1.png-9e5dc5003c37ec8fc2d01b76d466d7a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Miscellanious Assets Dump/Image/Blade1.png"
-dest_files=["res://.godot/imported/Blade1.png-ae587f243356a4ff648880ed50b436ff.ctex"]
+source_file="res://Miscellanious Assets Dump/Image/beyblades/pixelart/Blade1.png"
+dest_files=["res://.godot/imported/Blade1.png-9e5dc5003c37ec8fc2d01b76d466d7a3.ctex"]
 
 [params]
 
