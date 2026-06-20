@@ -8,10 +8,20 @@ extends RigidBody2D
 # Can be part of a power up later
 # What's the mechanic like? I'm not sure about the core mechanic right now
 # Is player going to control the beyblade? Against who? It could be speedrun type game.
+
+@export var starting_spin_velocity:float = 30;
+
+
 var default_velocity: float = 200;
+var spin_velocity: float = starting_spin_velocity
+var player_died: bool = false
 
 func _physics_process(delta: float) -> void:
-	$Sprite2D.rotate(1.0)
+	$Sprite2D.rotate(spin_velocity * delta)
+	if spin_velocity > 0:
+		spin_velocity -= delta
+	else:
+		player_died = true
 	
 	var current_velocity = Vector2(0, 0);
 
