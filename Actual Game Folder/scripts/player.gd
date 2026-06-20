@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends RigidBody2D
 
 # TODO:
 # Add collision shape for the player
@@ -11,7 +11,7 @@ extends CharacterBody2D
 var default_velocity: float = 200;
 
 func _physics_process(delta: float) -> void:
-	rotate(1.0)
+	$Sprite2D.rotate(1.0)
 	
 	var current_velocity = Vector2(0, 0);
 
@@ -27,7 +27,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("down"):
 		current_velocity[1] += default_velocity;
 
-	velocity = current_velocity;
-	move_and_slide();
+	apply_force(current_velocity)
 
 	pass
