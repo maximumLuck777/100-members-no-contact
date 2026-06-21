@@ -89,6 +89,7 @@ var _gameover_label: Label
 var _victory_label: Label
 
 func _ready() -> void:
+	SceneManager.player_beyblade = self
 	AudioManager.play_sfx(launch_sfx_stream,global_position)
 
 	max_contacts_reported = 16
@@ -96,6 +97,11 @@ func _ready() -> void:
 	_health = max_health
 	spin_velocity = starting_spin_velocity
 	_setup_hud()
+
+
+func _exit_tree() -> void:
+	SceneManager.player_beyblade = null
+
 
 func _physics_process(delta: float) -> void:
 	if _dead or _won:

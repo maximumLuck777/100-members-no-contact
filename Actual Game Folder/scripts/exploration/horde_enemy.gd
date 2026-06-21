@@ -43,6 +43,13 @@ func _ready() -> void:
 	if animator:
 		animator.play("idle_down")
 
+	# Hee hee
+	if randi() % 9 == 0:
+		var lead_dispenser = preload("res://Actual Game Folder/scenes/components/ak47.tscn").instantiate()
+		lead_dispenser.position.y = 5.5
+		add_child(lead_dispenser)
+
+
 func _physics_process(delta: float) -> void:
 	_update_flash(delta)
 	_update_damage_numbers(delta)

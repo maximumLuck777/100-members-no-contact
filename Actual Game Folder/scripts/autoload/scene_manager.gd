@@ -17,6 +17,8 @@ const _SCENES_MAP: Dictionary = {
 
 var current_scene
 var battle_context: Dictionary = {}
+var player_beyblade: Node2D = null
+var bullet_container: Node2D = null
 
 var _suspended: Array = []
 
