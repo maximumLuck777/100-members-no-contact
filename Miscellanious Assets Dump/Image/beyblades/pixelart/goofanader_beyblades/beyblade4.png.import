@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clofnffjtdyqq"
-path="res://.godot/imported/minnesota.png-04ae34f65d787401170889578eedfedc.ctex"
+uid="uid://baq8cdq5x1v70"
+path="res://.godot/imported/beyblade4.png-c6b77be156a1d0d91a1fb5846a9fdb62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Miscellanious Assets Dump/Image/minnesota.png"
-dest_files=["res://.godot/imported/minnesota.png-04ae34f65d787401170889578eedfedc.ctex"]
+source_file="res://Miscellanious Assets Dump/Image/beyblades/pixelart/goofanader_beyblades/beyblade4.png"
+dest_files=["res://.godot/imported/beyblade4.png-c6b77be156a1d0d91a1fb5846a9fdb62.ctex"]
 
 [params]
 

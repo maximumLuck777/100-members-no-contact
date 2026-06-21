@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clofnffjtdyqq"
-path="res://.godot/imported/minnesota.png-04ae34f65d787401170889578eedfedc.ctex"
+uid="uid://v6ypaecx3gtp"
+path="res://.godot/imported/grass-tileset-nicole.png-1abc70f9b0c730855c54825aaf983917.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Miscellanious Assets Dump/Image/minnesota.png"
-dest_files=["res://.godot/imported/minnesota.png-04ae34f65d787401170889578eedfedc.ctex"]
+source_file="res://Miscellanious Assets Dump/Image/tilesets/grass-tileset-nicole.png"
+dest_files=["res://.godot/imported/grass-tileset-nicole.png-1abc70f9b0c730855c54825aaf983917.ctex"]
 
 [params]
 

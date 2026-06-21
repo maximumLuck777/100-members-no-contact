@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clofnffjtdyqq"
-path="res://.godot/imported/minnesota.png-04ae34f65d787401170889578eedfedc.ctex"
+uid="uid://d3auud05436v7"
+path="res://.godot/imported/ice-tileset-nicole.png-2a47244838c83e298eadc59db8c4e3b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Miscellanious Assets Dump/Image/minnesota.png"
-dest_files=["res://.godot/imported/minnesota.png-04ae34f65d787401170889578eedfedc.ctex"]
+source_file="res://Miscellanious Assets Dump/Image/tilesets/ice-tileset-nicole.png"
+dest_files=["res://.godot/imported/ice-tileset-nicole.png-2a47244838c83e298eadc59db8c4e3b9.ctex"]
 
 [params]
 
