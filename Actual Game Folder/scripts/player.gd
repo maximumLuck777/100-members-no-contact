@@ -634,4 +634,3 @@ func _update_boss_ui() -> void:
 	elif _boss_seen:
 		_objective_label.visible = false
 		_boss_bar.visible = false
-

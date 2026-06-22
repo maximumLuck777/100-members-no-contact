@@ -30,7 +30,6 @@ SceneManager="*res://Actual Game Folder/scripts/autoload/scene_manager.gd"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [dotnet]
@@ -40,6 +39,7 @@ project/assembly_name="100-members-no-contact"
 [global_group]
 
 interactable="Interactable objects"
+player=""
 
 [gui]
 
