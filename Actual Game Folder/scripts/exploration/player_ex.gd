@@ -23,9 +23,15 @@ var near_enemy: Node2D = null
 #dialog
 @onready var dialogue_box: Node2D = $Camera2D/DialogueBox
 @onready var dialogue_text: RichTextLabel = $Camera2D/DialogueBox/DialogueBox/DialogueText
+@onready var dialogue_blip: AudioStreamPlayer = $DialogBlip
 var is_dialogue_active: bool = false
 var dialogue_pages: Array[String] = []
 var current_page: int = 0
+var is_typing: bool = false
+var _type_accum: float = 0.0
+var _parsed_text: String = ""
+var _voice_pitch: float = 1.0
+const TYPE_SPEED := 35.0  # characters revealed per second
 
 #sounds
 @onready var roll_sound: AudioStreamPlayer2D = $RollSound
@@ -46,7 +52,12 @@ func _physics_process(delta):
 
 	if is_dialogue_active:
 		velocity = Vector2.ZERO
-		if Input.is_action_just_pressed("interact"):
+		if is_typing:
+			if Input.is_action_just_pressed("interact"):
+				_reveal_full_page()
+			else:
+				_advance_typing(delta)
+		elif Input.is_action_just_pressed("interact"):
 			advance_dialogue()
 		return
 	
@@ -160,21 +171,69 @@ func start_dialog(lines: Array[String]):
 	is_dialogue_active = true
 	dialogue_pages = lines
 	current_page = 0
-	
+	_voice_pitch = _voice_pitch_for(near_enemy)
+
 	update_animations(Vector2.ZERO)
 	
 	dialogue_box.show()
-	dialogue_text.text = dialogue_pages[current_page]
+	_show_page()
 
 func advance_dialogue():
 	current_page += 1
 	if current_page < dialogue_pages.size():
-		dialogue_text.text = dialogue_pages[current_page]
+		_show_page()
 	else:
 		finish_dialogue()
 
+func _show_page():
+	dialogue_text.text = dialogue_pages[current_page]
+	_parsed_text = dialogue_text.get_parsed_text()
+	dialogue_text.visible_characters = 0
+	_type_accum = 0.0
+	is_typing = true
+
+func _advance_typing(delta: float):
+	_type_accum += delta * TYPE_SPEED
+	var total := dialogue_text.get_total_character_count()
+	var target := mini(int(_type_accum), total)
+	while dialogue_text.visible_characters < target:
+		var idx := dialogue_text.visible_characters
+		dialogue_text.visible_characters += 1
+		_play_blip(idx)
+	if dialogue_text.visible_characters >= total:
+		is_typing = false
+
+func _reveal_full_page():
+	dialogue_text.visible_characters = -1
+	is_typing = false
+
+func _play_blip(idx: int):
+	if idx < 0 or idx >= _parsed_text.length():
+		return
+	if _parsed_text[idx].strip_edges() == "":  # stay silent on spaces
+		return
+	dialogue_blip.pitch_scale = _voice_pitch * randf_range(0.97, 1.03)
+	dialogue_blip.play()
+
+# each speaker gets its own voice: an explicit voice_pitch if set, otherwise a
+# stable pitch derived from their name so every NPC sounds distinct
+func _voice_pitch_for(speaker) -> float:
+	if speaker == null:
+		return 1.0
+	if "voice_pitch" in speaker and speaker.voice_pitch > 0.0:
+		return speaker.voice_pitch
+	var key := ""
+	if "enemy_name" in speaker:
+		key = str(speaker.enemy_name)
+	else:
+		key = speaker.name
+	if key == "":
+		return 1.0
+	return 0.82 + float(abs(hash(key)) % 1000) / 1000.0 * 0.46  # ~0.82 .. 1.28
+
 func finish_dialogue():
 	is_dialogue_active = false
+	is_typing = false
 	dialogue_box.hide()
 	dialogue_pages = []
 	current_page = 0

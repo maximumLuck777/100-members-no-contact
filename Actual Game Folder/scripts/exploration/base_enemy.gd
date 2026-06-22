@@ -16,6 +16,8 @@ extends CharacterBody2D
 
 @export var enemy_name: String = "Bird Defaultson"
 @export var enemy_level: int = 1
+# 0 = auto (derive a distinct pitch from the name); >0 overrides the dialog voice
+@export var voice_pitch: float = 0.0
 
 func _ready():
 	animator.play("idle_down")
