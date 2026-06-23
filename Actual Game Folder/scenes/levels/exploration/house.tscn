@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b1227f3u8ele1" path="res://Actual Game Folder/scenes/components/exploration/player_ex.tscn" id="3_ac8e4"]
 [ext_resource type="PackedScene" uid="uid://xv8it6luhbrs" path="res://Actual Game Folder/scenes/levels/exploration/door.tscn" id="4_mk0ui"]
 [ext_resource type="PackedScene" uid="uid://cb7yp1ck2dxle" path="res://Actual Game Folder/scenes/components/exploration/beyblade_pickup.tscn" id="5_pkup0"]
+[ext_resource type="PackedScene" uid="uid://dq4lpjpb86ee5" path="res://Actual Game Folder/scenes/components/exploration/television.tscn" id="6_wec0n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ac8e4"]
 texture = ExtResource("1_h4sms")
@@ -655,5 +656,16 @@ position = Vector2(184, 369)
 mode = 1
 requires_beyblade = true
 
-[node name="BeybladePickup" parent="." instance=ExtResource("5_pkup0")]
+[node name="BeybladePickup" parent="." unique_id=1994555973 instance=ExtResource("5_pkup0")]
 position = Vector2(200, 210)
+
+[node name="Television" parent="." unique_id=1917266711 instance=ExtResource("6_wec0n")]
+position = Vector2(141, 217)
+
+[node name="CollisionShape2D" parent="Television/CharacterBody2D" parent_id_path=PackedInt32Array(1917266711, 1500952215) index="0" unique_id=1987916004]
+position = Vector2(7, 2)
+
+[node name="AnimatedSprite2D" parent="Television/CharacterBody2D" parent_id_path=PackedInt32Array(1917266711, 1500952215) index="2" unique_id=1686201453]
+position = Vector2(7, 2)
+
+[editable path="Television"]
