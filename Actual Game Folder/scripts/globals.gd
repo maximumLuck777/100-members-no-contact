@@ -2,7 +2,6 @@ extends Node
 
 var current_screen: String = "menu"
 
-var coin_total: int
 var has_beyblade: bool = false
 
 var spin_dash: bool = false
