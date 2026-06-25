@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://rox7vko7cfj6" path="res://Miscellanious Assets Dump/Image/Title screen/Rip.png" id="9_mpbnu"]
 [ext_resource type="Texture2D" uid="uid://b4cbp0u35e566" path="res://Miscellanious Assets Dump/Image/Title screen/Grabber_beyblade.png" id="10_4m5qw"]
 [ext_resource type="Texture2D" uid="uid://hs2box2ysjnk" path="res://Miscellanious Assets Dump/Image/beyblades/pixelart/Blade1.png" id="10_wg53l"]
-[ext_resource type="Texture2D" uid="uid://drkncgrbjd0w5" path="res://Miscellanious Assets Dump/Image/Title screen/Title screen.png" id="11_4m5qw"]
+[ext_resource type="Texture2D" uid="uid://86lfssc10umt" path="res://Miscellanious Assets Dump/Image/Title screen/Title screen.png" id="11_4m5qw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wg53l"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -101,6 +101,11 @@ offset_right = 641.0
 offset_bottom = 360.0
 scale = Vector2(1.7996, 1.79831)
 texture = ExtResource("1_pvo6j")
+
+[node name="TITLESCEEN" type="Sprite2D" parent="." unique_id=492549704]
+position = Vector2(451, 129)
+scale = Vector2(0.665, 0.665)
+texture = ExtResource("11_4m5qw")
 
 [node name="LET IT RIP" type="Button" parent="." unique_id=787360440]
 layout_mode = 0
@@ -200,11 +205,6 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_qga3b")
 max_value = 1.0
 step = 0.005
 value = 1.0
-
-[node name="TitleScreen" type="Sprite2D" parent="." unique_id=492549704]
-position = Vector2(451, 129)
-scale = Vector2(0.665, 0.665)
-texture = ExtResource("11_4m5qw")
 
 [connection signal="pressed" from="SETTINGS" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Settings/Close_options" to="." method="_on_close_options_pressed"]
