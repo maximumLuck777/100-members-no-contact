@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://rox7vko7cfj6" path="res://Miscellanious Assets Dump/Image/Title screen/Rip.png" id="9_mpbnu"]
 [ext_resource type="Texture2D" uid="uid://b4cbp0u35e566" path="res://Miscellanious Assets Dump/Image/Title screen/Grabber_beyblade.png" id="10_4m5qw"]
 [ext_resource type="Texture2D" uid="uid://hs2box2ysjnk" path="res://Miscellanious Assets Dump/Image/beyblades/pixelart/Blade1.png" id="10_wg53l"]
-[ext_resource type="Texture2D" uid="uid://86lfssc10umt" path="res://Miscellanious Assets Dump/Image/Title screen/Title screen.png" id="11_4m5qw"]
+[ext_resource type="Texture2D" uid="uid://86lfssc10umt" path="res://Miscellanious Assets Dump/Image/Title screen/TITLE SCREEN.png" id="11_4m5qw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wg53l"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
