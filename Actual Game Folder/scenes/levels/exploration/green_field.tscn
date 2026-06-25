@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b4yhhc6om0vsq" path="res://Actual Game Folder/scenes/components/exploration/squirrel.tscn" id="7_ao2ok"]
 [ext_resource type="PackedScene" uid="uid://blg2e204oqwme" path="res://Actual Game Folder/scenes/components/exploration/lizard.tscn" id="8_muyyu"]
 [ext_resource type="PackedScene" uid="uid://cqjdtoavoh5wu" path="res://Actual Game Folder/scenes/components/exploration/seagull.tscn" id="9_e3i70"]
+[ext_resource type="PackedScene" uid="uid://c6860iad8dtsb" path="res://Actual Game Folder/scenes/components/exploration/grave.tscn" id="14_br5mg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ao2ok"]
 texture = ExtResource("1_smi17")
@@ -1135,6 +1136,10 @@ position = Vector2(845, 337)
 
 [node name="Seagull" parent="." unique_id=365002936 instance=ExtResource("9_e3i70")]
 position = Vector2(767, 671)
+
+[node name="Grave" parent="." unique_id=483528663 instance=ExtResource("14_br5mg")]
+position = Vector2(91.00001, 235)
+scale = Vector2(0.51, 0.51)
 
 [editable path="PlayerEx"]
 [editable path="PlayerEx/CharacterBody2D/Camera2D/DialogueBox"]

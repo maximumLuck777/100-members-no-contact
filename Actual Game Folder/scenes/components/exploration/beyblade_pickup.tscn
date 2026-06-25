@@ -20,6 +20,8 @@ shape = SubResource("RectangleShape2D_pkup3")
 
 [node name="Indicator" type="Label" parent="CharacterBody2D" unique_id=474475645]
 visible = false
+z_index = 100
+z_as_relative = false
 offset_left = -17.3333
 offset_top = -25.3333
 offset_right = 17.6667
